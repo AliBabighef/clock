@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+}
+.containnerClock{
+    background:linear-gradient(to right, #03a9f4, #0000000a);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.containnerClock .clock{
+    position: relative;
+    background-color: #c7eaea;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.containnerClock .clock::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: #000;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    z-index: 5555;
+    transform: translate(-50%, -50%);
+}
+.containnerClock .clock .num{
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* background-color: brown; */
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.containnerClock .clock .num:first-of-type{
+    transform: rotateZ(0deg);
+}
+.containnerClock .clock .num:nth-child(1){
+    transform: rotateZ(30deg);
+}
+.containnerClock .clock .num:nth-child(2){
+    transform: rotateZ(60deg);
+}
+.containnerClock .clock .num:nth-child(3){
+    transform: rotateZ(90deg);
+}
+.containnerClock .clock .num:nth-child(4){
+    transform: rotateZ(120deg);
+}
+.containnerClock .clock .num:nth-child(5){
+    transform: rotateZ(150deg);
+}
+.containnerClock .clock .num:nth-child(6){
+    transform: rotateZ(180deg);
+}
+.containnerClock .clock .num:nth-child(7){
+    transform: rotateZ(210deg);
+}
+.containnerClock .clock .num:nth-child(8){
+    transform: rotateZ(240deg);
+}
+.containnerClock .clock .num:nth-child(9){
+    transform: rotateZ(270deg);
+}
+.containnerClock .clock .num:nth-child(10){
+    transform: rotateZ(300deg);
+}
+.containnerClock .clock .num:nth-child(11){
+    transform: rotateZ(330deg);
+}
+.containnerClock .clock .num.hour,
+.containnerClock .clock .num.min,
+.containnerClock .clock .num.scn{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    transform-origin: bottom;
+}
+.containnerClock .clock .num.scn{
+    background: #F00;
+    height: 45%;
+    width: 1.5px;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%)
+
+}
+.containnerClock .clock .num.min{
+    background: rgb(43 27 27);
+    height: 30%;
+    width: 3px;
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.containnerClock .clock .num.hour{
+    background: #000;
+    height: 20%;
+    width: 5px;
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    z-index: 3;
+    transform: translateX(-50%);
+}
+.clock span{
+    position: absolute;
+    left: 50%;
+    top: 38%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    color: #30393e;
+    z-index: 1220;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+
